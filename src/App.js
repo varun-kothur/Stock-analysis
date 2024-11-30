@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PerformanceAnalysis from "./Components/PerformanceAnalysis";
 import RiskManagement from "./Components/RiskManagement";
+import StockStatistics from "./Components/StockStatistics"; // Importing the new component
 
 const App = () => {
     const [stockData, setStockData] = useState([]);
@@ -41,6 +42,7 @@ const App = () => {
                 <>
                     <PerformanceAnalysis stockData={stockData} />
                     <RiskManagement stockData={stockData} />
+                    <StockStatistics stockData={stockData} /> {/* Render the StockStatistics component */}
                 </>
             )}
         </div>
