@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import PerformanceAnalysis from "./Components/PerformanceAnalysis";
-import RiskManagement from "./Components/RiskManagement";
-import StockStatistics from "./Components/StockStatistics";
-import SectorAllocation from "./Components/SectorAllocation"; // Importing the new component
+import PerformanceAnalysis from "./components/PerformanceAnalysis";
+import RiskManagement from "./components/RiskManagement";
+import StockStatistics from "./components/StockStatistics";
+import SectorAllocation from "./components/SectorAllocation";
+import TopPerformers from "./Components/TopPerformers"; // Importing the new component
 
 const App = () => {
     const [stockData, setStockData] = useState([]);
@@ -44,10 +45,12 @@ const App = () => {
                     <PerformanceAnalysis stockData={stockData} />
                     <RiskManagement stockData={stockData} />
                     <StockStatistics stockData={stockData} />
-                    <SectorAllocation stockData={stockData} /> {/* Render Sector Allocation */}
+                    <SectorAllocation stockData={stockData} />
+                    <TopPerformers stockData={stockData} /> {/* Render Top Performers */}
                 </>
             )}
         </div>
     );
 };
+
 export default App;
